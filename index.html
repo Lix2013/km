@@ -1,0 +1,136 @@
+<!--
+Copyright (C) 2026 Lix
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM - الموقع الرسمي</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: rgb(0, 0, 30);
+            color: white;
+            text-align: center;
+        }
+
+        code_box {
+            display: block;
+            width: 250px;
+            background-color: rgb(20, 20, 20);
+            border: 1px solid rgb(100, 100, 100);
+            border-radius: 5px;
+            margin: 30px auto; 
+            padding: 15px;
+            cursor: pointer; 
+            transition: background-color 0.3s;
+        }
+
+        code_box:hover {
+            background-color: rgb(40, 40, 40);
+        }
+
+        code_box code {
+            margin: 0;
+            font-size: 1.5rem;
+            color: rgb(0, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h2 {
+            color: orange;
+        }
+
+        button {
+            background-color: rgb(0, 0, 30);
+            color: white;
+            border: 1px solid rgb(100, 100, 100);
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(40, 40, 40);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>KM</h1>
+    <h3>Koyot Manager</h3>
+    <p>اداة بسيطة و كاملة لتثبيت البكجات و فحص حالة النظام و استهلاك الموارد اضافة الى واجهة عصرية</p>
+
+    
+
+    <div id="main_buttons">
+        <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+        <h2>الشرح</h2>
+        <button onclick="showExplanation(); hideButtons();">الشرح</button>
+        <h2>download</h2>
+        <button>download</button>
+        <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+    </div>
+
+    <div id="explanation"></div>
+
+    <script>
+        function showExplanation() {
+            document.getElementById('explanation').innerHTML = `
+            <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+            <h2>شرح بسيط لطريقة التثبيت و الاعداد </h2>
+            <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+    <h2>km auto-setup</h2>
+    <p>لاعداد ملفات الاعدادات في الوضع الافتراضي و اضافة مجلدات التطبيقات</p>
+    <code_box>
+        <code>km auto-setup</code>
+    </code_box>
+
+    <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+
+    <h2>km start</h2>
+    <p>لتشغيل التطبيق</p>
+    <code_box>
+        <code>km start</code>
+    </code_box>
+
+    <button onclick="showMainButtons()">اعادة اظهار الازرار</button>
+    `
+        }
+
+        function hideButtons() {
+            document.getElementById('main_buttons').innerHTML = ''
+        }
+
+        function showMainButtons() {
+            document.getElementById('main_buttons').innerHTML = `
+            <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+        <h2>الشرح</h2>
+        <button onclick="showExplanation(); hideButtons();">الشرح</button>
+        <h2>download</h2>
+        <button>download</button>
+        <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
+        `
+            document.getElementById('explanation').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
