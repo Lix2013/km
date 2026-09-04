@@ -31,7 +31,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             text-align: center;
         }
 
-        code_box {
+        .code_box {
             display: block;
             width: 250px;
             background-color: rgb(20, 20, 20);
@@ -43,11 +43,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             transition: background-color 0.3s;
         }
 
-        code_box:hover {
+        .code_box:hover {
             background-color: rgb(40, 40, 40);
         }
 
-        code_box code {
+        .code_box code {
             margin: 0;
             font-size: 1.5rem;
             color: rgb(0, 255, 255);
@@ -87,6 +87,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <button onclick="showExplanation(); hideButtons();">الشرح</button>
         <h2>download</h2>
         <button>download</button>
+        <h2>قراءة LICENSE</h2>
+        <button onclick="window.location.href = 'https://github.com/Lix2013/km/blob/master/LICENSE'">LICENSE</button>
         <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
     </div>
 
@@ -100,17 +102,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
     <h2>km auto-setup</h2>
     <p>لاعداد ملفات الاعدادات في الوضع الافتراضي و اضافة مجلدات التطبيقات</p>
-    <code_box>
+    <div class="code_box">
         <code>km auto-setup</code>
-    </code_box>
+    </div>
 
     <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
 
     <h2>km start</h2>
     <p>لتشغيل التطبيق</p>
-    <code_box>
+    <div class="code_box">
         <code>km start</code>
-    </code_box>
+    </div>
 
     <button onclick="showMainButtons()">اعادة اظهار الازرار</button>
     `
@@ -127,6 +129,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <button onclick="showExplanation(); hideButtons();">الشرح</button>
         <h2>download</h2>
         <button>download</button>
+        <h2>قرائة LICENSE<h2>
+        <button onclick="window.location.href = 'https://github.com/Lix2013/km/blob/master/LICENSE'">LICENSE</button>
         <hr style="border: 1px solid rgba(169, 169, 169, 0.274)">
         `
             document.getElementById('explanation').innerHTML = '';
