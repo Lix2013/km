@@ -18,3 +18,9 @@ km auto-setup
 ```
 km start
 ```
+
+# للتنزيل و قراءة LICENSE و الشرح كامل اذهب الى:
+## [text](https://koyot-manager.netlify.app/)
+
+
+License: Distributed under the GNU General Public License v3.0. See LICENSE for more information
